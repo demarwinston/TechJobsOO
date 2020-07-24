@@ -1,27 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace TechJobsOO
 {
-    public class PositionType : JobField
+    public abstract class JobField
     {
-        public PositionType(string value) : base(value)
-        {
-        }
-        /*public int Id { get; }
+        public int Id { get; set; }
         private static int nextId = 1;
+
         public string Value { get; set; }
 
-        public PositionType()
+        public JobField()
         {
             Id = nextId;
             nextId++;
         }
 
-        public PositionType(string value) : this()
+        public JobField(string value) : this()
         {
             Value = value;
         }
 
-        // TODO: Add custom Equals(), GetHashCode(), and ToString() methods.
+        
 
         public override string ToString()
         {
@@ -30,17 +31,14 @@ namespace TechJobsOO
 
         public override bool Equals(object obj)
         {
-            return obj is PositionType type &&
-                   Id == type.Id &&
-                   Value == type.Value;
+            return obj is JobField job &&
+                   Id == job.Id;
         }
 
         public override int GetHashCode()
         {
             return HashCode.Combine(Id, Value);
-        }*/
+        }
 
-       
     }
-
 }
